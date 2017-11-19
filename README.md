@@ -1,2 +1,5 @@
 # topaz
-Website for @datasektionen's 35 year anniversary
+Website for [@datasektionen](http://github.com/datasektionen)'s 35 year anniversary
+
+### Authors
+[@aronstrandberg](http://github.com/aronstrandberg)
