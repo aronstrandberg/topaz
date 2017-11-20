@@ -30,6 +30,11 @@
     "no-use-before-define": ["error", { "functions": false }],
     "no-confusing-arrow": ["error", { "allowParens": true }],
     "prefer-template": 0,
-    "function-paren-newline": 0
+    "function-paren-newline": 0,
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "to" ],
+      "aspects": [ "noHref", "invalidHref", "preferButton" ]
+    }]
   }
 }

@@ -1,13 +1,15 @@
 import React from 'react'
-import Typekit from 'react-typekit'
-import Router from './Router'
+import { BrowserRouter, Route } from 'react-router-dom'
+import Layout from 'components/App/Layout'
+import Home from 'components/Home/Home'
 
 function App () {
   return (
-    <div>
-      <Router />
-      <Typekit kitId="xfh3gcv" />
-    </div>
+    <BrowserRouter>
+      <Layout>
+        <Route path="/" component={Home} />
+      </Layout>
+    </BrowserRouter>
   )
 }
 
