@@ -1,25 +1,13 @@
-import React, { Component } from 'react';
-import logo from 'images/djubileet-logo.png';
-import css from './App.scss';
-import Typekit from 'react-typekit';
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Home from 'components/Home/Home'
 
-class App extends Component {
-  render() {
-    return (
-      <main className={css.app}>
-        <header className={css.header}>
-          <img src={logo} className={css.logo} alt="logo" />
-          <h1 className={css.title}>
-            djubileet 2018
-          </h1>
-        </header>
-        <p className={css.intro}>
-          Datasektionen fyller 35!
-        </p>
-        <Typekit kitId="xfh3gcv" />
-      </main>
-    );
-  }
+function App () {
+  return (
+    <BrowserRouter>
+      <Route path="/" component={Home} />
+    </BrowserRouter>
+  );
 }
 
 export default App;

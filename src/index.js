@@ -5,7 +5,6 @@ import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 import { AppContainer } from 'react-hot-loader'
 
-
 registerServiceWorker();
 
 const render = (Component) => {
