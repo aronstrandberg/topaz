@@ -1,7 +1,6 @@
 import React from 'react'
 import css from './Home.scss'
 import logo from 'images/djubileet-logo.png'
-import Typekit from 'react-typekit'
 
 function Home () {
   return (
@@ -15,7 +14,6 @@ function Home () {
       <p className={css.intro}>
         Datasektionen fyller 35!
       </p>
-      <Typekit kitId="xfh3gcv" />
     </main>
   )
 }

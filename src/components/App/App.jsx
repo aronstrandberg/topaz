@@ -1,12 +1,13 @@
 import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
-import Home from 'components/Home/Home'
+import Typekit from 'react-typekit'
+import Router from './Router'
 
 function App () {
   return (
-    <BrowserRouter>
-      <Route path="/" component={Home} />
-    </BrowserRouter>
+    <div>
+      <Router />
+      <Typekit kitId="xfh3gcv" />
+    </div>
   )
 }
 
