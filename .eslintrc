@@ -1,0 +1,35 @@
+{
+  "extends": [
+    "react-app",
+    "airbnb"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  },
+  "rules": {
+    "prefer-const": ["error", {
+        "destructuring": "any",
+        "ignoreReadBeforeAssign": false
+    }],
+    "arrow-parens": [1, "as-needed", {
+      "requireForBlockBody": false
+    }],
+    "semi": ["error", "never"],
+    "import/prefer-default-export": "off",
+    "import/first": ["error", "off"],
+    "comma-dangle": ["error", "always-multiline"],
+    "space-before-function-paren": ["error", {
+      "anonymous": "always",
+      "named": "always",
+      "asyncArrow": "always"
+    }],
+    "no-use-before-define": ["error", { "functions": false }],
+    "no-confusing-arrow": ["error", { "allowParens": true }],
+    "prefer-template": 0,
+    "function-paren-newline": 0
+  }
+}

@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
 import Home from 'components/Home/Home'
 
 function App () {
@@ -7,7 +7,7 @@ function App () {
     <BrowserRouter>
       <Route path="/" component={Home} />
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App
