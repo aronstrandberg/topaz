@@ -1,9 +1,12 @@
 .app {
   text-align: center;
-  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial;
   background: #EC5F99;
+  font-family: "jaf-domus";
   min-height: 100vh;
   color: #fff;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "jaf-domus-titling-web";
 }
 
 .logo {
