@@ -1,12 +1,22 @@
+@import "src/styles/variables";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
 .app {
   text-align: center;
-  background: #EC5F99;
   font-family: "jaf-domus";
+  background: $pink;
+  color: $yellow;
   min-height: 100vh;
-  color: #fff;
 }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "jaf-domus-titling-web";
+  color: $wine;
 }
 
 .logo {
