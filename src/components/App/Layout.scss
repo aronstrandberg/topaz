@@ -6,14 +6,23 @@ html, body {
   min-height: 100vh;
 }
 
-.main {
+.app {
   font-family: "jaf-domus";
-  background: $pink;
-  color: $yellow;
+  background: $peach;
+  // color: $white;
+  color: $orange;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  align-content: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "jaf-domus-titling-web";
-  color: $wine;
 }

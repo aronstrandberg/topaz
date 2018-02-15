@@ -7,6 +7,10 @@
   padding: 1em 0;
 }
 
+.ul {
+  padding: 0;
+}
+
 .li {
   list-style-type: none;
   display: inline;
@@ -22,6 +26,7 @@
     transition: color 0.25s;
     letter-spacing: 3px;
     font-weight: 900;
+    color: $yellow;
 
     &:visited {
       color: inherit;

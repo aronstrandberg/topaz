@@ -1,8 +1,8 @@
-$black: #1a191b;
+@import "src/styles/variables";
 
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: #EC5F99;
+  background: $pink;
 }

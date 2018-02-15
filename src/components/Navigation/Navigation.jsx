@@ -7,6 +7,7 @@ function Navigation () {
     <nav className={css.nav}>
       <ul className={css.ul}>
         <NavigationItem link="/" title="Hem" />
+        <NavigationItem link="/schema" title="Schema" />
       </ul>
     </nav>
   )

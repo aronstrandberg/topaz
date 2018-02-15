@@ -6,11 +6,13 @@ import css from './Layout.scss'
 
 function Layout ({ children }) {
   return (
-    <main className={css.main}>
+    <div className={css.app}>
       <Navigation />
-      { children }
+      <main className={css.main}>
+        { children }
+      </main>
       <Typekit kitId="xfh3gcv" />
-    </main>
+    </div>
   )
 }
 

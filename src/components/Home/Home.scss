@@ -1,3 +1,5 @@
+@import "src/styles/variables";
+
 .app {
   text-align: center;
 }
@@ -16,6 +18,8 @@
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 5px;
+  color: $white;
+  text-shadow: 3px 3px $orange;
 }
 
 .intro {
