@@ -33,6 +33,15 @@ const Schedule = () => (
       {
         schedule.sort((a, b) => a.id > b.id).map(item => <ScheduleItem key={item.id} {...item} />)
       }
+      <h5>
+        Fler event tillkommer!
+      </h5>
+      <p>
+        Eventuell information om evenemangen kommer
+        vid ett datum som är senare än nu
+        men tidigare än samma dag som eventet.
+        Så mycket lovar vi!
+      </p>
     </div>
   </div>
 )
