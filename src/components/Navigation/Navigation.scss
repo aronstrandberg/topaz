@@ -26,14 +26,16 @@
     transition: color 0.25s;
     letter-spacing: 3px;
     font-weight: 900;
-    color: $yellow;
+    color: $orange;
 
     &:visited {
       color: inherit;
     }
 
     &:hover {
-      color: $blue;
+      color: inherit;
+      text-shadow: 5px 5px $pink;
+      text-shadow: $pink 5px 5px;
     }
   }
 }
