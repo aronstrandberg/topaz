@@ -10,7 +10,7 @@ const schedule = [
   },
   {
     id: 2,
-    date: '30 sep',
+    date: '29 sep',
     title: 'Banketten',
   },
   {
