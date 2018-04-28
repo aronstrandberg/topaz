@@ -35,6 +35,7 @@
       "components": [ "Link" ],
       "specialLink": [ "to" ],
       "aspects": [ "noHref", "invalidHref", "preferButton" ]
-    }]
+    }],
+    "no-underscore-dangle": ["error", { "allow": ["__html"] }]
   }
 }

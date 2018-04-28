@@ -12,6 +12,7 @@ const schedule = [
     id: 2,
     date: '29 sep',
     title: 'Banketten',
+    info: { __html: "<b>Biljetter</b><br/>Den första omgången biljetter släpps 2/5 på <a href='http://bankett.confetti.events'>http://bankett.confetti.events</a>" },
   },
   {
     id: 3,
@@ -46,7 +47,9 @@ const Schedule = () => (
   </div>
 )
 
-const ScheduleItem = ({ date, title, featuring }) => (
+const ScheduleItem = ({
+  date, title, featuring, info,
+}) => (
   <div className={css.item}>
     <h2 className={css.date}>{ date }</h2>
     <div className={css.content}>
@@ -56,6 +59,9 @@ const ScheduleItem = ({ date, title, featuring }) => (
           feat. { featuring }
         </h5>
       }
+      { info.__html &&
+        <p dangerouslySetInnerHTML={info} /> // eslint-disable-line react/no-danger
+      }
     </div>
   </div>
 )
@@ -64,10 +70,16 @@ ScheduleItem.propTypes = {
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   featuring: PropTypes.string,
+  info: PropTypes.shape({
+    __html: PropTypes.string,
+  }),
 }
 
 ScheduleItem.defaultProps = {
   featuring: '',
+  info: {
+    __html: '',
+  },
 }
 
 export default Schedule

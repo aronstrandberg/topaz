@@ -6,3 +6,9 @@ body {
   font-family: sans-serif;
   background: $pink;
 }
+
+a {
+  color: $orange;
+  text-decoration: none;
+  border-bottom: 1px solid $orange;
+}
