@@ -12,7 +12,7 @@ const schedule = [
     id: 2,
     date: '29 sep',
     title: 'Banketten',
-    info: { __html: "<b>Biljetter</b><br/>Den första omgången biljetter släpps 2/5 på <a href='http://bankett.confetti.events'>http://bankett.confetti.events</a>" },
+    info: { __html: "<b>Biljetter</b><br/>Den första omgången biljetter släpps 2/5 på <a href='http://bankett.djubileet.se'>http://bankett.djubileet.se</a>" },
   },
   {
     id: 3,
