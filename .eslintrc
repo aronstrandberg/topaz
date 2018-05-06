@@ -15,9 +15,7 @@
         "destructuring": "any",
         "ignoreReadBeforeAssign": false
     }],
-    "arrow-parens": [1, "as-needed", {
-      "requireForBlockBody": false
-    }],
+    "arrow-parens": 0,
     "semi": ["error", "never"],
     "import/prefer-default-export": "off",
     "import/first": ["error", "off"],
@@ -36,6 +34,7 @@
       "specialLink": [ "to" ],
       "aspects": [ "noHref", "invalidHref", "preferButton" ]
     }],
-    "no-underscore-dangle": ["error", { "allow": ["__html"] }]
+    "no-underscore-dangle": ["error", { "allow": ["__html"] }],
+    "object-curly-newline": 0,
   }
 }
