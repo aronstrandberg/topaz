@@ -1,28 +1,33 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import moment from 'moment'
+import classnames from 'classnames'
 import css from './Schedule.scss'
+
+const parse = (date) => moment(date, 'YYYY-MM-DD')
+const format = (date) => moment(date).format('DD MMM')
 
 const schedule = [
   {
     id: 1,
-    date: '7 apr',
+    date: parse('2018-04-7'),
     title: 'Halvårsfesten',
   },
   {
     id: 2,
-    date: '29 sep',
+    date: parse('2018-09-29'),
     title: 'Banketten',
     info: { __html: "<b>Biljetter</b><br/>Den första omgången biljetter släpps 2/5 på <a href='http://bankett.djubileet.se'>http://bankett.djubileet.se</a>" },
   },
   {
     id: 3,
-    date: '3 okt',
+    date: parse('2018-10-03'),
     title: 'Onsdagspub XXL',
     featuring: 'DKM',
   },
   {
     id: 4,
-    date: '6 okt',
+    date: parse('2018-10-06'),
     title: 'Slutfesten',
   },
 ]
@@ -47,27 +52,32 @@ const Schedule = () => (
   </div>
 )
 
-const ScheduleItem = ({
-  date, title, featuring, info,
-}) => (
-  <div className={css.item}>
-    <h2 className={css.date}>{ date }</h2>
-    <div className={css.content}>
-      <h2 className={css.title}>{ title }</h2>
-      { featuring &&
-        <h5 className={css.featuring}>
-          feat. { featuring }
-        </h5>
-      }
-      { info.__html &&
-        <p dangerouslySetInnerHTML={info} /> // eslint-disable-line react/no-danger
-      }
+const ScheduleItem = ({ date, title, featuring, info }) => {
+  const past = moment().isAfter(moment(date))
+  const classes = classnames({
+    [css.item]: true,
+    [css.past]: past,
+  })
+  return (
+    <div className={classes}>
+      <h2 className={css.date}>{ format(date) }</h2>
+      <div className={css.content}>
+        <h2 className={css.title}>{ title }</h2>
+        { featuring &&
+          <h5 className={css.featuring}>
+            feat. { featuring }
+          </h5>
+        }
+        { info.__html &&
+          <p dangerouslySetInnerHTML={info} /> // eslint-disable-line react/no-danger
+        }
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 ScheduleItem.propTypes = {
-  date: PropTypes.string.isRequired,
+  date: PropTypes.instanceOf(moment).isRequired,
   title: PropTypes.string.isRequired,
   featuring: PropTypes.string,
   info: PropTypes.shape({

@@ -62,3 +62,10 @@
   margin: 0;
 }
 
+.past {
+  text-decoration: line-through;
+  color: #888;
+  .title, .content, .date {
+    color: #888;
+  }
+}
