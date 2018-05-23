@@ -17,6 +17,7 @@ const schedule = [
     id: 2,
     date: parse('2018-09-29'),
     title: 'Banketten',
+    facebook: 'https://www.facebook.com/events/218477885405600/',
     info: { __html: "<b>Biljetter</b><br/>Den andra omgången biljetter släpps inom kort på <a href='http://bankett.djubileet.se'>http://bankett.djubileet.se</a>" },
   },
   {
@@ -29,6 +30,7 @@ const schedule = [
     id: 4,
     date: parse('2018-10-06'),
     title: 'Slutfesten',
+    facebook: 'https://www.facebook.com/events/915084615341399/',
     info: { __html: "<b>Biljetter</b><br/>Den första omgången biljetter släpps 4/6 på <a href='http://slutfesten.djubileet.se'>http://slutfesten.djubileet.se</a>" },
   },
 ]
@@ -53,7 +55,7 @@ const Schedule = () => (
   </div>
 )
 
-const ScheduleItem = ({ date, title, featuring, info }) => {
+const ScheduleItem = ({ date, title, featuring, facebook, info }) => {
   const past = moment().isAfter(moment(date))
   const classes = classnames({
     [css.item]: true,
@@ -69,6 +71,11 @@ const ScheduleItem = ({ date, title, featuring, info }) => {
             feat. { featuring }
           </h5>
         }
+        { facebook &&
+          <h5 className={css.featuring}>
+            <a href={facebook}>@facebook</a>
+          </h5>
+        }
         { info.__html &&
           <p dangerouslySetInnerHTML={info} /> // eslint-disable-line react/no-danger
         }
@@ -81,12 +88,14 @@ ScheduleItem.propTypes = {
   date: PropTypes.instanceOf(moment).isRequired,
   title: PropTypes.string.isRequired,
   featuring: PropTypes.string,
+  facebook: PropTypes.string,
   info: PropTypes.shape({
     __html: PropTypes.string,
   }),
 }
 
 ScheduleItem.defaultProps = {
+  facebook: '',
   featuring: '',
   info: {
     __html: '',
