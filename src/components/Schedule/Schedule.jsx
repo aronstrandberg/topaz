@@ -17,7 +17,7 @@ const schedule = [
     id: 2,
     date: parse('2018-09-29'),
     title: 'Banketten',
-    info: { __html: "<b>Biljetter</b><br/>Den första omgången biljetter släpps 2/5 på <a href='http://bankett.djubileet.se'>http://bankett.djubileet.se</a>" },
+    info: { __html: "<b>Biljetter</b><br/>Den andra omgången biljetter släpps inom kort på <a href='http://bankett.djubileet.se'>http://bankett.djubileet.se</a>" },
   },
   {
     id: 3,
@@ -29,6 +29,7 @@ const schedule = [
     id: 4,
     date: parse('2018-10-06'),
     title: 'Slutfesten',
+    info: { __html: "<b>Biljetter</b><br/>Den första omgången biljetter släpps 4/6 på <a href='http://slutfesten.djubileet.se'>http://slutfesten.djubileet.se</a>" },
   },
 ]
 
