@@ -18,7 +18,7 @@ const schedule = [
     date: parse('2018-09-29'),
     title: 'Banketten',
     facebook: 'https://www.facebook.com/events/218477885405600/',
-    info: { __html: "<b>Biljetter</b><br/>Den andra omgången biljetter släpps inom kort på <a href='http://bankett.djubileet.se'>http://bankett.djubileet.se</a>" },
+    info: { __html: "<b>Biljetter</b><br/>Den andra omgången biljetter släpps onsdag 4/7, klockan 19.00 på <a href='http://bankett.djubileet.se'>http://bankett.djubileet.se</a>" },
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const schedule = [
     date: parse('2018-10-06'),
     title: 'Slutfesten',
     facebook: 'https://www.facebook.com/events/915084615341399/',
-    info: { __html: "<b>Biljetter</b><br/>Den första omgången biljetter släpps 4/6 på <a href='http://slutfesten.djubileet.se'>http://slutfesten.djubileet.se</a>" },
+    info: { __html: "<b>Biljetter</b><br/>Den andra omgången biljetter släpps 12/7 på <a href='http://slutfesten.djubileet.se'>http://slutfesten.djubileet.se</a>" },
   },
 ]
 
