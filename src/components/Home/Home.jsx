@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import css from './Home.scss'
 import logo from 'images/djubileet-logo.png'
 
@@ -13,6 +14,9 @@ function Home () {
       </header>
       <p className={css.intro}>
         Datasektionen fyller 35!
+      </p>
+      <p className={css.intro}>
+        <Link to="/schema">Info om biljetter!</Link>
       </p>
     </main>
   )
