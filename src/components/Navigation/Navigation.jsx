@@ -8,6 +8,7 @@ function Navigation () {
       <ul className={css.ul}>
         <NavigationItem link="/" title="Hem" />
         <NavigationItem link="/schema" title="Schema" />
+        <NavigationItem link="/biljetter" title="Biljetter" />
       </ul>
     </nav>
   )
