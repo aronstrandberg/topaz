@@ -12,7 +12,7 @@ const Schedule = () => (
     <div className={css.schedule}>
       <h1 className={css.headline}>Schema</h1>
       {
-        schedule.sort((a, b) => a.id > b.id).map(item => <ScheduleItem key={item.id} {...item} />)
+        schedule.map(item => <ScheduleItem key={item.id} {...item} />)
       }
       <h5>
         Fler event tillkommer!
@@ -27,7 +27,7 @@ const Schedule = () => (
   </div>
 )
 
-const ScheduleItem = ({ date, title, featuring, facebook, info }) => {
+const ScheduleItem = ({ date, title, featuring, facebook, link, info }) => {
   const past = moment().isAfter(moment(date))
   const classes = classnames({
     [css.item]: true,
@@ -40,12 +40,17 @@ const ScheduleItem = ({ date, title, featuring, facebook, info }) => {
         <h2 className={css.title}>{ title }</h2>
         { featuring &&
           <h5 className={css.featuring}>
-            feat. { featuring }
+            med { featuring }
           </h5>
         }
         { facebook &&
           <h5 className={css.featuring}>
             <a href={facebook}>@facebook</a>
+          </h5>
+        }
+        { link &&
+          <h5 className={css.featuring}>
+            <a href={link.url}>{link.text}</a>
           </h5>
         }
         { info.__html &&
@@ -61,6 +66,10 @@ ScheduleItem.propTypes = {
   title: PropTypes.string.isRequired,
   featuring: PropTypes.string,
   facebook: PropTypes.string,
+  link: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+  }),
   info: PropTypes.shape({
     __html: PropTypes.string,
   }),
@@ -68,6 +77,7 @@ ScheduleItem.propTypes = {
 
 ScheduleItem.defaultProps = {
   facebook: '',
+  link: {},
   featuring: '',
   info: {
     __html: '',
