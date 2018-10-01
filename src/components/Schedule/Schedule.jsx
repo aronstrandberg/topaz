@@ -5,7 +5,7 @@ import classnames from 'classnames'
 import schedule from './data'
 import css from './Schedule.scss'
 
-const format = (date) => moment(date, 'YYYY-MM-DD').format('DD MMM')
+const format = (date) => moment(date, 'YYYY-MM-DD HH:mm').format('DD MMM')
 
 const Schedule = () => (
   <div className={css.wrapper}>
