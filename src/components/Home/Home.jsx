@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import css from './Home.scss'
 import logo from 'images/djubileet-logo.png'
 
@@ -16,7 +15,7 @@ function Home () {
         Datasektionen fyller 35!
       </p>
       <p className={css.intro}>
-        <Link to="/schema">Info om biljetter!</Link>
+        <a href="mailto:jubileum@d.kth.se">Kontakta oss</a>
       </p>
     </main>
   )
