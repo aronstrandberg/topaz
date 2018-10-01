@@ -34,7 +34,7 @@ const schedule = [
   {
     id: 5,
     date: '2018-10-02 12:00',
-    title: 'Lunchföreläsning',
+    title: 'Lunchföreläsning med Facebook',
     featuring: 'NLG',
     facebook: 'https://www.facebook.com/events/1117562791742659/',
   },
